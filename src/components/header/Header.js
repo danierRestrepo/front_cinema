@@ -1,12 +1,16 @@
-import logo from '../../assets/img/clapperboard.png';
+import logo from '../../assets/img/logoCinema.webp';
+import "./Header.css";
 import {TopMenu} from '../menu/TopMenu';
 
 export const Header = ()=>{
 
     return (
         <div>
-            <img src={logo} alt="logo" />
+            <div className='flex text-center'>
+            <img className='logo' src={logo} alt="logo" />
             <h1>Bienvenido</h1>
+
+            </div>
             <TopMenu />
         </div>
     )
