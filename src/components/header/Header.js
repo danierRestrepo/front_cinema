@@ -1,4 +1,5 @@
 import logo from '../../assets/img/clapperboard.png';
+import {TopMenu} from '../menu/TopMenu';
 
 export const Header = ()=>{
 
@@ -6,6 +7,7 @@ export const Header = ()=>{
         <div>
             <img src={logo} alt="logo" />
             <h1>Bienvenido</h1>
+            <TopMenu />
         </div>
     )
 }
