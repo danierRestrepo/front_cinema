@@ -5,6 +5,7 @@ import "./Movie.css";
 import { API_URL, getToken } from "../../util/Util";
 import Swal from "sweetalert2";
 
+
 export const Movie = () => {
   const params = useParams();
   const [movieId, setMovieId] = useState("");
@@ -85,6 +86,7 @@ export const Movie = () => {
       });
     }
   };
+
   const setScoreData = () => {
     const scores = [];
     for (let index = 1; index <= 10; index++) {
@@ -92,10 +94,12 @@ export const Movie = () => {
     }
     setScore(scores);
   };
+
   const sendScore = async (event) => {
     const { value } = event.target;
     await sendScoreApi(value);
   };
+
   const message = () => (
     <Toast>
       <Toast.Header>
@@ -106,6 +110,7 @@ export const Movie = () => {
       <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
     </Toast>
   );
+
   return (
     <div className="movie-container">
       <iframe
@@ -114,7 +119,7 @@ export const Movie = () => {
         height="515"
         src={
           !movie.trailerLink
-            ? "https://www.youtube.com/embed/4Lp-Vc4i2QI"
+            ? "https://www.youtube.com/watch?v=6Z0lStsM6pA&ab_channel=CaniDev"
             : movie.trailerLink
         }
         title={movie.name}
